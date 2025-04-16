@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeckosFy - Seu Perfil Musical</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦎</text></svg>">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <span class="logo-icon">🦎</span>
+                <h1>GeckosFy</h1>
+            </div>
+            <p>Descubra seu perfil musical e crie playlists personalizadas com IA</p>
+        </div>
+        
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h2>Sua experiência musical personalizada</h2>
+                <p>Conecte-se ao Spotify para descobrir insights sobre seu gosto musical e criar playlists que combinam perfeitamente com seu estilo.</p>
+                <ul class="feature-list">
+                    <li><i class="material-icons">analytics</i> Análise detalhada do seu perfil musical</li>
+                    <li><i class="material-icons">auto_awesome</i> Playlists personalizadas baseadas no seu gosto</li>
+                    <li><i class="material-icons">insights</i> Descubra seus gêneros e eras favoritas</li>
+                </ul>
+            </div>
+            <button id="loginBtn">
+                <i class="material-icons">music_note</i>
+                Conectar com Spotify
+            </button>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="user-profile">
+                <div class="profile-placeholder">
+                    <i class="material-icons">account_circle</i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Perfil Spotify</div>
+                    <div class="connection-status"><span class="status-dot"></span> Conectado</div>
+                </div>
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="material-icons">logout</i>
+                    Desconectar
+                </button>
+            </div>
+            
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h2>Seu Dashboard Musical</h2>
+                <p>Bem-vindo ao seu perfil musical personalizado</p>
+            </div>
+            
+            <!-- Seção de Análise -->
+            <div class="analysis-box" id="analysis">
+                <div class="box-header">
+                    <h2><i class="material-icons">insights</i> Seu Estilo Musical</h2>
+                    <span class="box-badge">IA</span>
+                </div>
+                <div class="section-description">Análise baseada nas suas músicas favoritas</div>
+                <div id="moodSummary" class="summary">
+                    <div class="loading-placeholder">
+                        <div class="loading"></div>
+                        <div class="loading" style="width: 80%"></div>
+                        <div class="loading" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div id="genreChart" class="chart"></div>
+            </div>
+
+            <!-- Top Músicas -->
+            <div class="favorites-box">
+                <div class="box-header">
+                    <h2><i class="material-icons">favorite</i> Suas Músicas Favoritas</h2>
+                    <div class="box-actions">
+                        <button class="action-btn" title="Atualizar">
+                            <i class="material-icons">refresh</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="section-description">As músicas que você mais ouve no Spotify</div>
+                <div id="topTracks" class="tracks-grid">
+                    <div class="loading-placeholder">
+                        <div class="track-loading"></div>
+                        <div class="track-loading"></div>
+                        <div class="track-loading"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist Automática -->
+            <div class="playlist-box">
+                <div class="box-header">
+                    <h2><i class="material-icons">playlist_add</i> Playlist Personalizada</h2>
+                    <span class="box-badge premium">Premium</span>
+                </div>
+                <div class="section-description">Crie uma playlist baseada no seu perfil musical</div>
+                <div class="playlist-options">
+                    <div class="mood-selector">
+                        <span class="mood-label">Humor:</span>
+                        <div class="mood-tags">
+                            <span class="mood-tag active">Todos</span>
+                            <span class="mood-tag">Animado</span>
+                            <span class="mood-tag">Relaxante</span>
+                            <span class="mood-tag">Energético</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="generatePlaylistBtn">
+                    <i class="material-icons">add</i>
+                    Criar Playlist Personalizada
+                </button>
+                <div id="generatedPlaylist"></div>
+            </div>
+            
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-icon small">🦎</span>
+                        <span>GeckosFy</span>
+                    </div>
+                    <p>GeckosFy &copy; 2023 - Sua experiência musical personalizada</p>
+                    <div class="footer-links">
+                        <a href="#">Sobre</a>
+                        <a href="#">Privacidade</a>
+                        <a href="#">Termos</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
